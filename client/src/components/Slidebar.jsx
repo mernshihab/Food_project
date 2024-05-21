@@ -7,7 +7,7 @@ const Slidebar = ({ active }) => {
   return (
     <div className="h-auto bg-[#F1F2F7] w-2/12 p-5">
       <div className="flex items-center">
-        <img className="w-6 h-6 mr-2" src="logo.svg" alt="Logo" />
+        <img className="w-6 h-6 mr-2" src="/logo.svg" alt="Logo" />
         <h2 className="font-poppins font-bold text-sm text-[#5A67BA]">
           Crud Food
         </h2>
