@@ -28,7 +28,6 @@ const CreateFood = () => {
   const foodCreate = async (event) => {
     event.preventDefault();
     let formData = new FormData(event.target);
-    console.log(formData.get("QTY"));
     let foodName = formData.get("foodName");
     let foodCategory = formData.get("foodCategory");
     let foodCode = formData.get("foodCode");
