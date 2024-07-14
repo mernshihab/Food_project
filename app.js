@@ -1,14 +1,14 @@
 const express =require('express');
 const app= new express();
 const rateLimit =require('express-rate-limit');
-const helmet =require('helmet');
+const helmet = require('helmet');
 const hpp =require('hpp');
 const cors =require('cors');
 const cookieParser = require('cookie-parser');
 const path = require("path");
 const router = require('./src/route/api');
 const mongoose = require('mongoose');
-
+require('dotenv').config()
 app.use(cookieParser());
 app.use(cors())
 app.use(helmet())
@@ -23,7 +23,7 @@ app.use(limiter)
 
 
 // Database Connection
-let URI = "mongodb+srv://shihab:shihab1404@cluster0.mofnf8k.mongodb.net/food?retryWrites=true&w=majority&appName=Cluster0"
+let URI = process.env.DATABASE_URL
 mongoose.connect(URI)
   .then(() => console.log('DB Connected!'));
 

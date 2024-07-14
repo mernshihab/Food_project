@@ -16,6 +16,8 @@ const CreateFood = () => {
       setValue("");
     }
   };
+
+  const BASE_url= import.meta.env.VITE_API_URL
   const handleQty = (event) => {
     const newValue = event.target.value;
     if (!isNaN(newValue)) {
